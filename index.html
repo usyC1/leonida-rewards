@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonida Gaming Shop — Claim Your $100 GTA VI Gaming Credit</title>
+  <meta name="description" content="Explore the Leonida Digital Gaming Shop. Gamers in the US, UK, Canada, and Australia can unlock a $100 digital gift card for PlayStation, Xbox, or Steam toward Grand Theft Auto VI." />
+  <meta property="og:title" content="Leonida Gaming Shop — Claim Your $100 GTA VI Gaming Credit" />
+  <meta property="og:description" content="Unlock a $100 digital gaming gift card for PS5, Xbox Series X/S, or Steam. Exclusive to US, UK, CA & AU residents." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#09090b" />
+
+  <!-- Google Fonts: Outfit (Display), Plus Jakarta Sans (Body), JetBrains Mono (Tabular Numerals) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Outfit', 'system-ui', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Theme Tokens — Default: Vice Sunset (Dark) */
+    :root {
+      color-scheme: dark;
+      --bg-canvas: #09090b;
+      --bg-surface: #121218;
+      --bg-elevated: #191922;
+      --border-subtle: rgba(255, 255, 255, 0.09);
+      --text-primary: #f4f4f5;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent-1: #ec4899;
+      --accent-2: #06b6d4;
+      --accent-3: #f97316;
+      --accent-glow-1: rgba(236, 72, 153, 0.35);
+      --accent-glow-2: rgba(6, 182, 212, 0.28);
+      --scrim-start: rgba(9, 9, 11, 0.94);
+      --scrim-mid: rgba(9, 9, 11, 0.78);
+    }
+
+    /* Theme Preset: Cobalt PSN */
+    html[data-store-theme="cobalt"] {
+      --bg-canvas: #060913;
+      --bg-surface: #0d1324;
+      --bg-elevated: #141c33;
+      --border-subtle: rgba(148, 163, 184, 0.14);
+      --accent-1: #3b82f6;
+      --accent-2: #38bdf8;
+      --accent-3: #818cf8;
+      --accent-glow-1: rgba(59, 130, 246, 0.38);
+      --accent-glow-2: rgba(56, 189, 248, 0.30);
+      --scrim-start: rgba(6, 9, 19, 0.95);
+      --scrim-mid: rgba(6, 9, 19, 0.78);
+    }
+
+    /* Theme Preset: Emerald Xbox */
+    html[data-store-theme="emerald"] {
+      --bg-canvas: #060c09;
+      --bg-surface: #0d1712;
+      --bg-elevated: #13221a;
+      --border-subtle: rgba(167, 243, 208, 0.12);
+      --accent-1: #10b981;
+      --accent-2: #22d3ee;
+      --accent-3: #84cc16;
+      --accent-glow-1: rgba(16, 185, 129, 0.36);
+      --accent-glow-2: rgba(34, 211, 238, 0.26);
+      --scrim-start: rgba(6, 12, 9, 0.95);
+      --scrim-mid: rgba(6, 12, 9, 0.78);
+    }
+
+    /* Light Mode Override (High-Contrast Daylight Storefront) */
+    html.light-store {
+      color-scheme: light;
+      --bg-canvas: #f4f4f6;
+      --bg-surface: #ffffff;
+      --bg-elevated: #f8fafc;
+      --border-subtle: rgba(15, 23, 42, 0.11);
+      --text-primary: #09090b;
+      --text-secondary: #3f3f46;
+      --text-muted: #52525b;
+      --scrim-start: rgba(9, 9, 11, 0.88);
+      --scrim-mid: rgba(9, 9, 11, 0.68);
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background-color 200ms ease, color 200ms ease;
+    }
+
+    .shop-surface {
+      background-color: var(--bg-surface);
+      border-color: var(--border-subtle);
+    }
+
+    .shop-elevated {
+      background-color: var(--bg-elevated);
+      border-color: var(--border-subtle);
+    }
+
+    .text-theme-primary { color: var(--text-primary); }
+    .text-theme-secondary { color: var(--text-secondary); }
+    .text-theme-muted { color: var(--text-muted); }
+    .border-theme { border-color: var(--border-subtle); }
+
+    .text-balance {
+      text-wrap: balance;
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Dynamic Accent Gradients */
+    .accent-gradient-text {
+      background: linear-gradient(95deg, var(--accent-1) 0%, var(--accent-3) 50%, var(--accent-2) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .accent-gradient-bar {
+      background: linear-gradient(90deg, var(--accent-1) 0%, var(--accent-3) 50%, var(--accent-2) 100%);
+    }
+
+    /* Ambient Theme Radial Backdrop */
+    .store-backdrop {
+      background-image:
+        radial-gradient(ellipse 65% 45% at 15% 0%, var(--accent-glow-1), transparent 65%),
+        radial-gradient(ellipse 55% 40% at 88% 4%, var(--accent-glow-2), transparent 60%);
+    }
+
+    /* Glowing $100 Voucher Card */
+    .voucher-border-glow {
+      background: linear-gradient(125deg, var(--accent-1) 0%, var(--accent-3) 48%, var(--accent-2) 100%);
+    }
+
+    .voucher-shell {
+      position: relative;
+      background: linear-gradient(140deg, #16161e 0%, #0b0b10 55%, #14121b 100%);
+      box-shadow:
+        0 24px 60px -15px rgba(0, 0, 0, 0.78),
+        0 0 42px -10px var(--accent-glow-1),
+        0 0 36px -12px var(--accent-glow-2);
+      transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .voucher-shell:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 28px 70px -15px rgba(0, 0, 0, 0.85),
+        0 0 54px -8px var(--accent-glow-1),
+        0 0 44px -10px var(--accent-glow-2);
+    }
+
+    /* Primary Shop CTA */
+    .cta-neon {
+      background: linear-gradient(95deg, var(--accent-1) 0%, var(--accent-3) 52%, var(--accent-1) 100%);
+      background-size: 200% 100%;
+      box-shadow: 0 12px 30px -8px var(--accent-glow-1), 0 0 0 1px rgba(255, 255, 255, 0.16) inset;
+      transition: background-position 260ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cta-neon:hover {
+      background-position: 100% 0;
+      transform: translateY(-1px);
+      box-shadow: 0 16px 36px -8px var(--accent-glow-1), 0 0 0 1px rgba(255, 255, 255, 0.24) inset;
+    }
+
+    /* Product Card Hover */
+    .shop-card {
+      transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms ease, box-shadow 200ms ease;
+    }
+
+    .shop-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-1);
+      box-shadow: 0 18px 40px -16px var(--accent-glow-1);
+    }
+
+    .shop-card.is-selected {
+      border-color: var(--accent-2);
+      box-shadow: 0 0 0 1px var(--accent-2), 0 16px 36px -14px var(--accent-glow-2);
+    }
+
+    /* Reserved CTA pulse */
+    @keyframes ctaPulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5), 0 12px 28px -8px rgba(16, 185, 129, 0.55);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0), 0 14px 34px -6px rgba(6, 182, 212, 0.5);
+      }
+    }
+
+    .cta-reserved-pulse {
+      animation: ctaPulseGlow 2s infinite;
+    }
+
+    @keyframes spinSlow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spinner-ring {
+      animation: spinSlow 0.85s linear infinite;
+    }
+
+    @keyframes claimSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .claim-enter {
+      animation: claimSlideIn 280ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Toggle Switch Knob */
+    .toggle-knob {
+      transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta-reserved-pulse,
+      .spinner-ring,
+      .claim-enter {
+        animation: none !important;
+      }
+      .voucher-shell,
+      .cta-neon,
+      .shop-card,
+      .toggle-knob {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-pink-500/30">
+
+  <!-- Top Sticky Urgency Bar (Compact for mobile 15% sticky cap) -->
+  <div id="urgency-bar" class="sticky top-0 z-50 border-b border-theme bg-[#09090b]/92 text-zinc-100 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 text-xs sm:text-sm">
+      <p class="truncate font-medium">
+        <span aria-hidden="true">🔥</span>
+        <span class="font-semibold text-white"><span id="stock-count" class="tabular-nums" style="color: var(--accent-1)">14</span> Rewards Remaining Today</span>
+        <span class="hidden sm:inline text-zinc-400"> — Exclusive to US, UK, CA &amp; AU Gamers</span>
+      </p>
+      <div class="flex shrink-0 items-center gap-2 font-mono text-xs font-semibold tabular-nums" style="color: var(--accent-2)">
+        <span class="hidden sm:inline text-zinc-400 font-sans font-normal">Drop resets in</span>
+        <span id="countdown-timer" class="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 text-cyan-300">09:47</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Storefront Shell -->
+  <div class="store-backdrop">
+
+    <!-- 3-Zone Top Store Navigation -->
+    <header class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 pt-4 pb-3 sm:px-6">
+      <a href="#top" class="font-display text-lg font-extrabold tracking-tight text-theme-primary whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded">
+        LEONIDA<span class="accent-gradient-text">SHOP</span>
+      </a>
+
+      <nav aria-label="Storefront navigation" class="hidden md:flex items-center gap-7 text-sm font-medium text-theme-secondary">
+        <a href="#store-catalog" class="hover:text-theme-primary transition-colors whitespace-nowrap shrink-0">Game Drops</a>
+        <a href="#eligibility-quiz" class="hover:text-theme-primary transition-colors whitespace-nowrap shrink-0">Claim Bag</a>
+        <a href="#how-it-works" class="hover:text-theme-primary transition-colors whitespace-nowrap shrink-0">How It Works</a>
+        <a href="#faq" class="hover:text-theme-primary transition-colors whitespace-nowrap shrink-0">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5 shrink-0">
+        <a
+          href="https://blitzrewarded.com/o/59/357984"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex min-h-[40px] items-center justify-center rounded-lg border px-4 py-2 text-xs font-bold text-white whitespace-nowrap transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+          style="background: linear-gradient(95deg, var(--accent-1), var(--accent-3)); border-color: rgba(255,255,255,0.18);"
+        >
+          Claim $100 Pass →
+        </a>
+      </div>
+    </header>
+
+    <!-- Storefront Theme & Region Control Strip -->
+    <div class="mx-auto max-w-7xl px-4 pb-4 sm:px-6">
+      <div class="shop-surface flex flex-wrap items-center justify-between gap-3 rounded-xl border px-3.5 py-2.5">
+        <!-- Shop Theme Presets -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+          <span class="text-xs font-semibold text-theme-muted whitespace-nowrap shrink-0">Shop Theme:</span>
+          <div class="flex items-center gap-1.5" role="group" aria-label="Storefront color theme">
+            <button
+              type="button"
+              data-theme-preset="vice"
+              aria-pressed="true"
+              class="theme-preset-btn min-h-[34px] rounded-lg px-3 py-1 text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+            >
+              Vice Sunset
+            </button>
+            <button
+              type="button"
+              data-theme-preset="cobalt"
+              aria-pressed="false"
+              class="theme-preset-btn min-h-[34px] rounded-lg px-3 py-1 text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+            >
+              Cobalt PSN
+            </button>
+            <button
+              type="button"
+              data-theme-preset="emerald"
+              aria-pressed="false"
+              class="theme-preset-btn min-h-[34px] rounded-lg px-3 py-1 text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+            >
+              Xbox Emerald
+            </button>
+          </div>
+        </div>
+
+        <!-- Dark / Light Mode Toggle + Currency Preview -->
+        <div class="flex items-center gap-3 ml-auto">
+          <button
+            type="button"
+            id="mode-toggle-btn"
+            aria-pressed="false"
+            class="shop-elevated inline-flex min-h-[34px] items-center gap-2 rounded-lg border px-3 py-1 text-xs font-semibold text-theme-primary hover:opacity-90 transition-opacity whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+          >
+            <span id="mode-icon" aria-hidden="true">🌙</span>
+            <span id="mode-label">Dark Mode</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- HERO STOREFRONT BANNER -->
+      <section class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:pb-16">
+        <div class="relative overflow-hidden rounded-2xl border border-theme bg-[#09090b] shadow-2xl">
+          <!-- Generated Key Art Backdrop -->
+          <img
+            src="./src/assets/images/hero_leonida_sunset_1795194148626.jpg"
+            alt="Leonida coastal boulevard at sunset with classic coupe and neon lights"
+            referrerPolicy="no-referrer"
+            class="absolute inset-0 h-full w-full object-cover object-center opacity-55"
+            onerror="this.style.display='none'"
+          />
+          <!-- Measured Contrast Scrim for WCAG AA Legibility -->
+          <div
+            class="absolute inset-0"
+            style="background: linear-gradient(95deg, var(--scrim-start) 0%, var(--scrim-mid) 52%, rgba(9,9,11,0.55) 100%);"
+          ></div>
+
+          <div class="relative z-10 grid grid-cols-1 items-center gap-8 p-6 sm:p-10 lg:grid-cols-12 lg:gap-10 lg:p-12">
+            <!-- Left Column: Offer Proposition & Primary CTA -->
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs font-medium text-zinc-300">
+                <span class="font-semibold" style="color: var(--accent-2)">Featured Store Drop</span>
+                <span aria-hidden="true" class="text-zinc-500">·</span>
+                <span>US, UK, CA &amp; AU Only</span>
+                <span aria-hidden="true" class="text-zinc-500">·</span>
+                <span>PS5, Xbox &amp; Steam</span>
+              </div>
+
+              <h1 class="font-display text-balance text-3xl font-extrabold leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-[3.35rem]">
+                Get Ready for Leonida: Claim Your
+                <span class="accent-gradient-text">$100 GTA VI Gaming Credit</span>
+              </h1>
+
+              <p class="max-w-xl text-sm leading-relaxed text-zinc-200 sm:text-base lg:text-lg">
+                Gamers in the United States, United Kingdom, Canada, and Australia can unlock a <strong class="font-semibold text-white">$100 digital gift card</strong> for PlayStation, Xbox, or Steam by completing quick sponsor deals, surveys, or app downloads.
+              </p>
+
+              <!-- Primary & Secondary Action Row -->
+              <div class="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:gap-4">
+                <a
+                  href="https://blitzrewarded.com/o/59/357984"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-neon inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-base font-bold text-white whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+                >
+                  <span>Check Eligibility &amp; Claim Now</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+
+                <a
+                  href="#store-catalog"
+                  class="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-white/20 bg-zinc-950/75 px-5 py-3 text-sm font-semibold text-white hover:border-white/40 transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+                >
+                  Browse Store Drops ↓
+                </a>
+              </div>
+
+              <!-- Unboxed Trust Details -->
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1 text-xs text-zinc-300">
+                <span>Instant digital code delivery</span>
+                <span aria-hidden="true" class="text-zinc-600">·</span>
+                <span>No credit card required</span>
+                <span aria-hidden="true" class="text-zinc-600">·</span>
+                <span>Sponsor-funded reward</span>
+              </div>
+            </div>
+
+            <!-- Right Column: Stylized Glowing $100 Digital Gaming Voucher Card -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+              <div class="w-full max-w-md">
+                <div class="voucher-border-glow rounded-2xl p-[1.5px]">
+                  <div class="voucher-shell rounded-[15px] p-6 sm:p-7 overflow-hidden">
+                    <!-- Vice City Sunset SVG Backdrop inside Card -->
+                    <svg class="pointer-events-none absolute inset-0 h-full w-full opacity-35" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="sunsetDisc" x1="210" y1="20" x2="210" y2="195" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stop-color="#f97316" />
+                          <stop offset="55%" stop-color="#ec4899" />
+                          <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1" />
+                        </linearGradient>
+                        <clipPath id="horizonClip">
+                          <rect x="0" y="0" width="420" height="175" />
+                        </clipPath>
+                      </defs>
+                      <g clip-path="url(#horizonClip)">
+                        <circle cx="315" cy="122" r="78" fill="url(#sunsetDisc)" opacity="0.55" />
+                        <rect x="230" y="128" width="170" height="4" fill="#0d0d12" />
+                        <rect x="230" y="140" width="170" height="6" fill="#0d0d12" />
+                        <rect x="230" y="155" width="170" height="8" fill="#0d0d12" />
+                      </g>
+                      <path d="M352 255 C348 210, 355 168, 368 134 C350 138, 336 146, 326 158 C335 138, 352 126, 369 124 C355 110, 338 106, 320 112 C338 100, 358 100, 374 114 C382 96, 396 86, 412 86 C398 95, 388 108, 383 122 C398 118, 410 124, 418 136 C404 132, 390 133, 378 138 C365 174, 358 214, 362 255 Z" fill="#09090b" opacity="0.85" />
+                      <line x1="0" y1="205" x2="420" y2="205" stroke="#06b6d4" stroke-opacity="0.2" stroke-width="1" />
+                      <line x1="0" y1="226" x2="420" y2="226" stroke="#ec4899" stroke-opacity="0.16" stroke-width="1" />
+                    </svg>
+
+                    <div class="relative z-10 flex flex-col justify-between space-y-6">
+                      <div class="flex items-start justify-between gap-4">
+                        <div>
+                          <p class="text-[11px] font-semibold uppercase tracking-[0.16em]" style="color: var(--accent-2)">Digital Gaming Voucher</p>
+                          <p id="voucher-card-title" class="mt-1 font-display text-lg font-bold tracking-tight text-white">Leonida Edition Credit</p>
+                        </div>
+                        <svg class="h-8 w-10 shrink-0" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+                          <rect x="0.75" y="0.75" width="38.5" height="30.5" rx="5.25" fill="url(#chipGrad)" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" />
+                          <path d="M12 1V31M28 1V31M1 11H12M28 11H39M1 21H12M28 21H39M12 16H28" stroke="rgba(9,9,11,0.45)" stroke-width="1.2" />
+                          <defs>
+                            <linearGradient id="chipGrad" x1="0" y1="0" x2="40" y2="32" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#f97316" stop-opacity="0.8" />
+                              <stop offset="0.5" stop-color="#ec4899" stop-opacity="0.7" />
+                              <stop offset="1" stop-color="#06b6d4" stop-opacity="0.8" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+
+                      <div>
+                        <div class="flex items-baseline gap-2">
+                          <span id="voucher-card-amount" class="font-display text-5xl font-extrabold tracking-tight text-white tabular-nums sm:text-6xl">$100</span>
+                          <span id="voucher-card-currency" class="font-mono text-xs font-semibold uppercase tracking-wider text-orange-400">USD Credit</span>
+                        </div>
+                        <p class="mt-2 text-xs text-zinc-300">Redeemable toward <span class="font-semibold text-white">GTA VI</span> pre-orders, store balance &amp; launch editions.</p>
+                      </div>
+
+                      <div class="flex items-center justify-between border-t border-white/10 pt-4">
+                        <div class="flex items-center gap-3 text-xs font-semibold text-zinc-200">
+                          <span>PSN</span>
+                          <span aria-hidden="true" class="text-zinc-500">/</span>
+                          <span>XBOX</span>
+                          <span aria-hidden="true" class="text-zinc-500">/</span>
+                          <span>STEAM</span>
+                        </div>
+                        <span class="font-mono text-[11px] tracking-widest text-cyan-300/90 tabular-nums">LNDA-VI-••••-984</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GAMING SHOP CATALOG WITH GAMES & PLATFORM TOGGLES -->
+      <section id="store-catalog" class="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:pb-18">
+        <!-- Catalog Header & Interactive Toggles -->
+        <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.14em]" style="color: var(--accent-2)">Digital Reward Catalog</p>
+            <h2 class="mt-1.5 font-display text-2xl font-bold tracking-tight text-theme-primary sm:text-3xl">
+              Select Your Game Edition or Store Credit
+            </h2>
+            <p class="mt-1 text-sm text-theme-secondary">
+              Filter by platform or switch between gift cards and game bundles, then reserve your $100 spot below.
+            </p>
+          </div>
+
+          <!-- Games Mode Toggle Switch (Gift Cards vs Game Bundles) -->
+          <div class="shop-surface inline-flex items-center justify-between gap-3 rounded-xl border px-3.5 py-2 self-start lg:self-auto">
+            <span class="text-xs font-semibold text-theme-secondary">Catalog View:</span>
+            <button
+              type="button"
+              id="bundle-mode-toggle"
+              role="switch"
+              aria-checked="false"
+              class="inline-flex min-h-[36px] items-center gap-2.5 rounded-lg px-2 py-1 text-xs font-semibold text-theme-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+            >
+              <span id="label-mode-cards" class="text-theme-primary">Gift Cards</span>
+              <span class="relative inline-flex h-5 w-9 shrink-0 items-center rounded-full bg-zinc-700 p-0.5 transition-colors" id="bundle-toggle-track">
+                <span id="bundle-toggle-knob" class="toggle-knob inline-block h-4 w-4 translate-x-0 rounded-full bg-white shadow"></span>
+              </span>
+              <span id="label-mode-bundles" class="text-theme-muted">Game Bundles</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Platform / Games Filter Tabs + Region Currency Toggle -->
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <!-- Platform Filter Tabs (Scrollable cleanly on phone) -->
+          <div class="shop-surface flex items-center gap-1.5 overflow-x-auto no-scrollbar rounded-xl border p-1.5" role="tablist" aria-label="Filter store items by platform">
+            <button type="button" role="tab" aria-selected="true" data-filter="all" class="catalog-tab min-h-[38px] rounded-lg px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
+              All Drops
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-filter="gta" class="catalog-tab min-h-[38px] rounded-lg px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
+              GTA VI Editions
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-filter="ps5" class="catalog-tab min-h-[38px] rounded-lg px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
+              PS5 Store
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-filter="xbox" class="catalog-tab min-h-[38px] rounded-lg px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
+              Xbox Series X/S
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-filter="pc" class="catalog-tab min-h-[38px] rounded-lg px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
+              PC Steam
+            </button>
+          </div>
+
+          <!-- Region Currency Toggle -->
+          <div class="shop-surface flex items-center gap-1 rounded-xl border p-1.5 self-start sm:self-auto" role="group" aria-label="Preview regional currency">
+            <button type="button" data-region="US" class="region-currency-btn min-h-[36px] rounded-lg px-2.5 py-1 font-mono text-xs font-bold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">US $100</button>
+            <button type="button" data-region="UK" class="region-currency-btn min-h-[36px] rounded-lg px-2.5 py-1 font-mono text-xs font-bold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">UK £80</button>
+            <button type="button" data-region="CA" class="region-currency-btn min-h-[36px] rounded-lg px-2.5 py-1 font-mono text-xs font-bold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">CA $135</button>
+            <button type="button" data-region="AU" class="region-currency-btn min-h-[36px] rounded-lg px-2.5 py-1 font-mono text-xs font-bold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">AU $150</button>
+          </div>
+        </div>
+
+        <!-- 4-Card Storefront Product Grid -->
+        <div id="catalog-grid" class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Rendered dynamically by JS for crisp toggle updates -->
+        </div>
+      </section>
+
+      <!-- INTERACTIVE 2-STEP ELIGIBILITY QUIZ & REWARD BAG -->
+      <section id="eligibility-quiz" class="mx-auto max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20">
+        <div class="shop-surface rounded-2xl border p-6 shadow-2xl sm:p-8">
+          <!-- Selected Item Summary Strip -->
+          <div class="shop-elevated mb-6 flex flex-col gap-3 rounded-xl border px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between">
+            <div class="min-w-0">
+              <p class="text-[11px] font-semibold uppercase tracking-wider" style="color: var(--accent-2)">Selected Reward Bag</p>
+              <p id="selected-bag-title" class="truncate font-display text-base font-bold text-theme-primary">
+                GTA VI: Leonida Launch Credit ($100)
+              </p>
+            </div>
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="font-mono text-xs text-theme-muted line-through tabular-nums" id="bag-retail-price">$100.00</span>
+              <span class="font-mono text-sm font-bold text-emerald-400 tabular-nums">$0.00 Sponsor Pass</span>
+            </div>
+          </div>
+
+          <!-- Quiz Header & Progress -->
+          <div class="flex flex-col gap-2 border-b border-theme pb-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 class="font-display text-2xl font-bold tracking-tight text-theme-primary sm:text-[1.75rem]">
+                Verify Your $100 Reward Eligibility
+              </h2>
+              <p class="mt-1 text-sm text-theme-secondary">
+                Confirm your gaming platform and country to reserve available stock.
+              </p>
+            </div>
+            <div id="quiz-step-indicator" class="font-mono text-xs font-semibold tabular-nums shrink-0" style="color: var(--accent-2)">
+              Step 1 of 2
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-zinc-800/70">
+            <div id="quiz-progress-bar" class="accent-gradient-bar h-full w-1/2 rounded-full transition-all duration-300"></div>
+          </div>
+
+          <!-- STEP 1: Platform Selection -->
+          <div id="quiz-step-1" class="mt-6">
+            <p class="text-sm font-semibold text-theme-primary">
+              1. Select your preferred gaming platform:
+            </p>
+            <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <button
+                type="button"
+                data-platform="PS5"
+                class="platform-btn shop-elevated group flex min-h-[68px] items-center gap-3.5 rounded-xl border px-4 py-3.5 text-left transition-all hover:border-pink-500/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              >
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-800/80 text-cyan-400">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 11h4M8 9v4m7-2h.01M17 13h.01M7.5 6h9a4.5 4.5 0 014.37 5.56l-.8 3.2A3 3 0 0117.16 17h-.38a2 2 0 01-1.78-1.1l-.55-1.1a1 1 0 00-.9-.55h-3.1a1 1 0 00-.9.55l-.55 1.1A2 2 0 017.22 17h-.38a3 3 0 01-2.91-2.24l-.8-3.2A4.5 4.5 0 017.5 6z" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="block font-display text-base font-bold text-theme-primary">PS5</span>
+                  <span class="block text-xs text-theme-muted">$100 PSN Code</span>
+                </div>
+              </button>
+
+              <button
+                type="button"
+                data-platform="Xbox Series X/S"
+                class="platform-btn shop-elevated group flex min-h-[68px] items-center gap-3.5 rounded-xl border px-4 py-3.5 text-left transition-all hover:border-pink-500/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              >
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-800/80 text-orange-400">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path stroke-linecap="round" d="M7.5 8.5c2.2 1.2 4.5 3.6 7.5 7M16.5 8.5c-2.2 1.2-4.5 3.6-7.5 7" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="block font-display text-base font-bold text-theme-primary">Xbox Series X/S</span>
+                  <span class="block text-xs text-theme-muted">$100 Xbox Credit</span>
+                </div>
+              </button>
+
+              <button
+                type="button"
+                data-platform="PC"
+                class="platform-btn shop-elevated group flex min-h-[68px] items-center gap-3.5 rounded-xl border px-4 py-3.5 text-left transition-all hover:border-pink-500/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              >
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-800/80 text-pink-400">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="12" rx="2" />
+                    <path stroke-linecap="round" d="M8 20h8M12 16v4" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="block font-display text-base font-bold text-theme-primary">PC</span>
+                  <span class="block text-xs text-theme-muted">$100 Steam Wallet</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Country Selection -->
+          <div id="quiz-step-2" class="mt-6 hidden">
+            <div class="flex items-center justify-between gap-4">
+              <p class="text-sm font-semibold text-theme-primary">
+                2. Select your eligible country for <span id="selected-platform-label" style="color: var(--accent-1)"></span>:
+              </p>
+              <button
+                type="button"
+                id="back-to-step-1"
+                class="text-xs font-medium text-theme-muted underline underline-offset-4 hover:text-theme-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1 py-0.5"
+              >
+                Change platform
+              </button>
+            </div>
+
+            <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <button
+                type="button"
+                data-country="United States"
+                data-code="US"
+                class="country-btn shop-elevated flex min-h-[56px] items-center justify-between rounded-xl border px-4 py-3 text-left transition-all hover:border-cyan-400/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              >
+                <span class="flex items-center gap-3">
+                  <span class="font-mono text-xs font-bold" style="color: var(--accent-2)">US</span>
+                  <span class="font-display text-base font-bold text-theme-primary">United States</span>
+                </span>
+                <span class="text-xs text-theme-muted">USD $100 →</span>
+              </button>
+
+              <button
+                type="button"
+                data-country="United Kingdom"
+                data-code="UK"
+                class="country-btn shop-elevated flex min-h-[56px] items-center justify-between rounded-xl border px-4 py-3 text-left transition-all hover:border-cyan-400/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              >
+                <span class="flex items-center gap-3">
+                  <span class="font-mono text-xs font-bold" style="color: var(--accent-2)">UK</span>
+                  <span class="font-display text-base font-bold text-theme-primary">United Kingdom</span>
+                </span>
+                <span class="text-xs text-theme-muted">UK £80 Equiv. →</span>
+              </button>
+
+              <button
+                type="button"
+                data-country="Canada"
+                data-code="CA"
+                class="country-btn shop-elevated flex min-h-[56px] items-center justify-between rounded-xl border px-4 py-3 text-left transition-all hover:border-cyan-400/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              >
+                <span class="flex items-center gap-3">
+                  <span class="font-mono text-xs font-bold" style="color: var(--accent-2)">CA</span>
+                  <span class="font-display text-base font-bold text-theme-primary">Canada</span>
+                </span>
+                <span class="text-xs text-theme-muted">CAD $135 Equiv. →</span>
+              </button>
+
+              <button
+                type="button"
+                data-country="Australia"
+                data-code="AU"
+                class="country-btn shop-elevated flex min-h-[56px] items-center justify-between rounded-xl border px-4 py-3 text-left transition-all hover:border-cyan-400/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              >
+                <span class="flex items-center gap-3">
+                  <span class="font-mono text-xs font-bold" style="color: var(--accent-2)">AU</span>
+                  <span class="font-display text-base font-bold text-theme-primary">Australia</span>
+                </span>
+                <span class="text-xs text-theme-muted">AUD $150 Equiv. →</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- LOADING STATE (1.5 seconds) -->
+          <div id="quiz-loading" class="mt-6 hidden py-8 text-center" role="status" aria-live="polite">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-zinc-700 border-t-cyan-400 border-r-pink-500 spinner-ring"></div>
+            <p class="mt-4 font-display text-lg font-bold text-theme-primary">
+              Verifying regional reward stock...
+            </p>
+            <p id="loading-subtext" class="mt-1 text-xs text-theme-muted">
+              Checking availability for your selection
+            </p>
+          </div>
+
+          <!-- RESERVED RESULT STATE -->
+          <div id="quiz-result" class="mt-6 hidden rounded-xl border border-emerald-500/60 bg-[#052a20] p-5 text-zinc-100 sm:p-6">
+            <div class="flex items-start gap-3.5">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-300">
+                <svg class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-display text-xl font-bold text-emerald-300">
+                  Spot Reserved!
+                </h3>
+                <p id="reserved-summary" class="mt-1 text-sm text-zinc-100">
+                  Your $100 digital gift card allocation is confirmed.
+                </p>
+                <p class="mt-1.5 text-xs text-zinc-300">
+                  Click below to complete the required sponsor deals, surveys, or app downloads on the next page to unlock your code.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <a
+                href="https://blitzrewarded.com/o/59/357984"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-reserved-pulse inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-6 py-3.5 text-base font-bold text-zinc-950 hover:from-emerald-400 hover:to-cyan-400 transition-colors sm:w-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+              >
+                <span>Continue &amp; Claim $100 Reward →</span>
+              </a>
+
+              <button
+                type="button"
+                id="reset-quiz-btn"
+                class="text-xs font-medium text-zinc-300 underline underline-offset-4 hover:text-white self-center sm:self-auto py-2 px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded"
+              >
+                Check another platform
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS (3 Simple Steps) -->
+      <section id="how-it-works" class="border-t border-theme py-14 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em]" style="color: var(--accent-3)">Reward Process</p>
+            <h2 class="mt-2 font-display text-3xl font-bold tracking-tight text-theme-primary sm:text-4xl">
+              How to Unlock Your $100 Credit
+            </h2>
+            <p class="mt-2 text-sm text-theme-secondary sm:text-base">
+              Three quick steps from store selection to email code delivery.
+            </p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class="shop-surface rounded-2xl border p-6">
+              <span class="font-mono text-sm font-bold tabular-nums" style="color: var(--accent-1)">01.</span>
+              <h3 class="mt-3 font-display text-xl font-bold text-theme-primary">Confirm Platform &amp; Region</h3>
+              <p class="mt-2 text-sm leading-relaxed text-theme-secondary">
+                Pick PS5, Xbox Series X/S, or PC from the shop and verify your location in the US, UK, Canada, or Australia.
+              </p>
+            </div>
+
+            <div class="shop-surface rounded-2xl border p-6">
+              <span class="font-mono text-sm font-bold tabular-nums" style="color: var(--accent-3)">02.</span>
+              <h3 class="mt-3 font-display text-xl font-bold text-theme-primary">Complete Sponsor Offers</h3>
+              <p class="mt-2 text-sm leading-relaxed text-theme-secondary">
+                Click through to complete the required sponsor deals, short surveys, or partner app downloads on the next page.
+              </p>
+            </div>
+
+            <div class="shop-surface rounded-2xl border p-6">
+              <span class="font-mono text-sm font-bold tabular-nums" style="color: var(--accent-2)">03.</span>
+              <h3 class="mt-3 font-display text-xl font-bold text-theme-primary">Receive Your $100 Code</h3>
+              <p class="mt-2 text-sm leading-relaxed text-theme-secondary">
+                Once sponsor completion is verified, your $100 PSN, Xbox, or Steam digital gift code is sent directly to your email.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECENT CLAIMS FEED & FAQ -->
+      <section class="border-t border-theme py-14 sm:py-20">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12">
+
+          <!-- Left: Recent Claims Feed -->
+          <div id="recent-claims" class="lg:col-span-6">
+            <div class="flex items-baseline justify-between gap-4">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.14em]" style="color: var(--accent-2)">Verified Activity</p>
+                <h2 class="mt-1.5 font-display text-2xl font-bold tracking-tight text-theme-primary sm:text-3xl">
+                  Recent Regional Claims
+                </h2>
+              </div>
+              <span class="text-xs text-theme-muted tabular-nums">US · UK · CA · AU</span>
+            </div>
+
+            <div id="claims-feed-list" class="shop-surface mt-6 divide-y divide-zinc-500/20 rounded-2xl border">
+              <!-- Populated & rotated by Vanilla JS -->
+            </div>
+          </div>
+
+          <!-- Right: 3-Question FAQ Accordion -->
+          <div id="faq" class="lg:col-span-6">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.14em]" style="color: var(--accent-1)">Common Questions</p>
+              <h2 class="mt-1.5 font-display text-2xl font-bold tracking-tight text-theme-primary sm:text-3xl">
+                Reward Program FAQ
+              </h2>
+            </div>
+
+            <div class="mt-6 space-y-3" id="faq-accordion">
+              <div class="shop-surface rounded-2xl border">
+                <button
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-panel-1"
+                  class="faq-trigger flex min-h-[56px] w-full items-center justify-between gap-4 px-5 py-4 text-left font-display text-base font-bold text-theme-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-2xl"
+                >
+                  <span>How do sponsor-funded $100 gaming rewards work?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-theme-muted transition-transform duration-200 rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="faq-panel-1" class="px-5 pb-5 text-sm leading-relaxed text-theme-secondary">
+                  Brand partners and digital advertisers subsidize the cost of the $100 gift cards in exchange for user engagement—such as trying featured mobile apps, completing market research surveys, or signing up for partner trials.
+                </div>
+              </div>
+
+              <div class="shop-surface rounded-2xl border">
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-2"
+                  class="faq-trigger flex min-h-[56px] w-full items-center justify-between gap-4 px-5 py-4 text-left font-display text-base font-bold text-theme-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-2xl"
+                >
+                  <span>Why do I need to complete sponsor deals on the next page?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-theme-muted transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="faq-panel-2" class="hidden px-5 pb-5 text-sm leading-relaxed text-theme-secondary">
+                  Deal completion is how sponsors verify genuine participant engagement and fund your $100 digital code. Complete the required offer tier shown after clicking through to qualify for payout.
+                </div>
+              </div>
+
+              <div class="shop-surface rounded-2xl border">
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-3"
+                  class="faq-trigger flex min-h-[56px] w-full items-center justify-between gap-4 px-5 py-4 text-left font-display text-base font-bold text-theme-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-2xl"
+                >
+                  <span>Which countries and digital stores are supported?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-theme-muted transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="faq-panel-3" class="hidden px-5 pb-5 text-sm leading-relaxed text-theme-secondary">
+                  This promotion is strictly open to residents of the United States, United Kingdom, Canada, and Australia. Verified participants receive a $100 (or regional currency equivalent) digital code for PlayStation Store, Xbox, or Steam via email.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FINAL CONVERSION BAND -->
+      <section class="shop-surface border-t py-12 sm:py-16">
+        <div class="mx-auto flex max-w-4xl flex-col items-center px-4 text-center sm:px-6">
+          <h2 class="font-display text-balance text-2xl font-extrabold tracking-tight text-theme-primary sm:text-3xl">
+            Ready to Lock In Your $100 GTA VI Gaming Credit?
+          </h2>
+          <p class="mt-2.5 max-w-xl text-sm text-theme-secondary sm:text-base">
+            Regional allocations refresh daily for US, UK, CA, and AU players. Continue now to view available sponsor offers.
+          </p>
+          <a
+            href="https://blitzrewarded.com/o/59/357984"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta-neon mt-6 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl px-8 py-3.5 text-base font-bold text-white whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+          >
+            <span>Claim Your $100 Digital Reward →</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- COMPLIANCE FOOTER -->
+    <footer class="border-t border-theme py-10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <span class="font-display text-sm font-bold tracking-tight text-theme-primary">
+            LEONIDA<span class="accent-gradient-text">SHOP</span>
+          </span>
+          <p class="text-xs text-theme-muted">
+            Eligible Regions: United States · United Kingdom · Canada · Australia
+          </p>
+        </div>
+
+        <p class="mt-5 text-xs leading-relaxed text-theme-muted">
+          <strong>Promotional Disclaimer:</strong> This website operates an independent promotional rewards program and is not affiliated with, endorsed by, or sponsored by Rockstar Games or Take-Two Interactive Software, Inc. Grand Theft Auto and GTA VI are trademarks of Take-Two Interactive. PlayStation, Xbox, and Steam are trademarks of their respective owners. Reward fulfillment requires completion of the specified sponsor deals, surveys, or app downloads and verification of regional eligibility (18+ in US, UK, CA, or AU).
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Vanilla JavaScript: Storefront Toggles, Theme Switcher, Quiz, Claims Feed & FAQ -->
+  <script>
+    (function () {
+      'use strict';
+
+      const CTA_URL = 'https://blitzrewarded.com/o/59/357984';
+
+      // =========================================================================
+      // 1. Storefront Theme Preset & Light/Dark Toggle
+      // =========================================================================
+      const htmlEl = document.documentElement;
+      const presetBtns = document.querySelectorAll('.theme-preset-btn');
+      const modeToggleBtn = document.getElementById('mode-toggle-btn');
+      const modeIcon = document.getElementById('mode-icon');
+      const modeLabel = document.getElementById('mode-label');
+
+      let activePreset = 'vice';
+      let isLightMode = false;
+
+      function syncPresetButtons() {
+        presetBtns.forEach(function (btn) {
+          const preset = btn.getAttribute('data-theme-preset');
+          const isSelected = preset === activePreset;
+          btn.setAttribute('aria-pressed', String(isSelected));
+          if (isSelected) {
+            btn.style.background = 'linear-gradient(95deg, var(--accent-1), var(--accent-2))';
+            btn.style.color = '#ffffff';
+          } else {
+            btn.style.background = 'transparent';
+            btn.style.color = 'var(--text-secondary)';
+          }
+        });
+      }
+
+      presetBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          activePreset = btn.getAttribute('data-theme-preset') || 'vice';
+          if (activePreset === 'vice') {
+            htmlEl.removeAttribute('data-store-theme');
+          } else {
+            htmlEl.setAttribute('data-store-theme', activePreset);
+          }
+          syncPresetButtons();
+        });
+      });
+
+      if (modeToggleBtn) {
+        modeToggleBtn.addEventListener('click', function () {
+          isLightMode = !isLightMode;
+          htmlEl.classList.toggle('light-store', isLightMode);
+          modeToggleBtn.setAttribute('aria-pressed', String(isLightMode));
+          if (modeIcon) modeIcon.textContent = isLightMode ? '☀️' : '🌙';
+          if (modeLabel) modeLabel.textContent = isLightMode ? 'Light Mode' : 'Dark Mode';
+        });
+      }
+
+      syncPresetButtons();
+
+      // =========================================================================
+      // 2. Gaming Shop Catalog Data, Filters & Toggles
+      // =========================================================================
+      const currencyMap = {
+        US: { symbol: '$100', retail: '$100.00', label: 'USD Credit' },
+        UK: { symbol: '£80', retail: '£80.00', label: 'GBP Equiv.' },
+        CA: { symbol: 'CA$135', retail: '$135.00', label: 'CAD Equiv.' },
+        AU: { symbol: 'A$150', retail: '$150.00', label: 'AUD Equiv.' }
+      };
+
+      const storeItems = [
+        {
+          id: 'gta-leonida',
+          tags: ['all', 'gta', 'ps5', 'xbox', 'pc'],
+          platformValue: 'PS5',
+          cardTitle: 'GTA VI: Leonida Credit',
+          bundleTitle: 'GTA VI Launch Edition Pass',
+          metaCard: 'PS5 / Xbox / PC · Digital Key',
+          metaBundle: 'Pre-Order Wallet + Launch Bonus',
+          image: './src/assets/images/shop_gta_edition_1795194148184.jpg',
+          alt: 'Leonida coastal boulevard neon game artwork',
+          stockText: '6 Codes Left'
+        },
+        {
+          id: 'psn-100',
+          tags: ['all', 'ps5', 'gta'],
+          platformValue: 'PS5',
+          cardTitle: 'PlayStation Store $100 Card',
+          bundleTitle: 'PS5 Leonida Collector Bundle',
+          metaCard: 'PS5 · Instant PSN Code',
+          metaBundle: 'PSN Wallet + Add-On Credit',
+          image: './src/assets/images/shop_psn_console_1795194148860.jpg',
+          alt: 'Matte black wireless controller on neon illuminated stand',
+          stockText: '4 Codes Left'
+        },
+        {
+          id: 'xbox-100',
+          tags: ['all', 'xbox', 'gta'],
+          platformValue: 'Xbox Series X/S',
+          cardTitle: 'Xbox Series X/S $100 Code',
+          bundleTitle: 'Xbox Leonida Ultimate Credit',
+          metaCard: 'Xbox · Microsoft Digital Key',
+          metaBundle: 'Xbox Store + Game Pass Credit',
+          image: './src/assets/images/hero_leonida_sunset_1795194148626.jpg',
+          alt: 'Sunset coastal highway with retro sports car',
+          stockText: '2 Codes Left'
+        },
+        {
+          id: 'steam-100',
+          tags: ['all', 'pc'],
+          platformValue: 'PC',
+          cardTitle: 'Steam Wallet $100 PC Key',
+          bundleTitle: 'PC Master Rig Credit Pack',
+          metaCard: 'PC · Steam Digital Wallet',
+          metaBundle: 'Steam Store + DLC Credit',
+          image: './src/assets/images/shop_pc_steam_rig_1795194148250.jpg',
+          alt: 'Minimalist dark PC gaming desk with glowing mechanical keyboard',
+          stockText: '2 Codes Left'
+        }
+      ];
+
+      let activeFilter = 'all';
+      let activeRegion = 'US';
+      let isBundleMode = false;
+      let selectedItemId = 'gta-leonida';
+
+      const catalogGridEl = document.getElementById('catalog-grid');
+      const catalogTabs = document.querySelectorAll('.catalog-tab');
+      const regionBtns = document.querySelectorAll('.region-currency-btn');
+      const bundleToggleBtn = document.getElementById('bundle-mode-toggle');
+      const bundleKnob = document.getElementById('bundle-toggle-knob');
+      const bundleTrack = document.getElementById('bundle-toggle-track');
+      const labelModeCards = document.getElementById('label-mode-cards');
+      const labelModeBundles = document.getElementById('label-mode-bundles');
+
+      const voucherAmountEl = document.getElementById('voucher-card-amount');
+      const voucherCurrencyEl = document.getElementById('voucher-card-currency');
+      const selectedBagTitleEl = document.getElementById('selected-bag-title');
+      const bagRetailPriceEl = document.getElementById('bag-retail-price');
+
+      function syncCatalogControls() {
+        catalogTabs.forEach(function (tab) {
+          const isMatch = tab.getAttribute('data-filter') === activeFilter;
+          tab.setAttribute('aria-selected', String(isMatch));
+          if (isMatch) {
+            tab.style.background = 'linear-gradient(95deg, var(--accent-1), var(--accent-3))';
+            tab.style.color = '#ffffff';
+          } else {
+            tab.style.background = 'transparent';
+            tab.style.color = 'var(--text-secondary)';
+          }
+        });
+
+        regionBtns.forEach(function (btn) {
+          const isMatch = btn.getAttribute('data-region') === activeRegion;
+          btn.setAttribute('aria-pressed', String(isMatch));
+          if (isMatch) {
+            btn.style.backgroundColor = 'var(--bg-elevated)';
+            btn.style.color = 'var(--accent-2)';
+            btn.style.boxShadow = 'inset 0 0 0 1px var(--accent-2)';
+          } else {
+            btn.style.backgroundColor = 'transparent';
+            btn.style.color = 'var(--text-muted)';
+            btn.style.boxShadow = 'none';
+          }
+        });
+
+        // Update hero voucher card & bag summary currency
+        const curr = currencyMap[activeRegion];
+        if (voucherAmountEl) voucherAmountEl.textContent = curr.symbol;
+        if (voucherCurrencyEl) voucherCurrencyEl.textContent = curr.label;
+        if (bagRetailPriceEl) bagRetailPriceEl.textContent = curr.retail;
+
+        const selectedItem = storeItems.find(function (i) { return i.id === selectedItemId; }) || storeItems[0];
+        if (selectedBagTitleEl) {
+          const title = isBundleMode ? selectedItem.bundleTitle : selectedItem.cardTitle;
+          selectedBagTitleEl.textContent = title + ' (' + curr.symbol + ')';
+        }
+      }
+
+      function renderCatalogGrid() {
+        if (!catalogGridEl) return;
+        const curr = currencyMap[activeRegion];
+        const filtered = storeItems.filter(function (item) {
+          return activeFilter === 'all' || item.tags.indexOf(activeFilter) !== -1;
+        });
+
+        catalogGridEl.innerHTML = '';
+
+        filtered.forEach(function (item) {
+          const isSelected = item.id === selectedItemId;
+          const title = isBundleMode ? item.bundleTitle : item.cardTitle;
+          const meta = isBundleMode ? item.metaBundle : item.metaCard;
+
+          const card = document.createElement('article');
+          card.className = 'shop-card shop-surface flex flex-col overflow-hidden rounded-2xl border' + (isSelected ? ' is-selected' : '');
+
+          card.innerHTML =
+            '<div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-900">' +
+              '<img src="' + item.image + '" alt="' + item.alt + '" referrerPolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-300 hover:scale-105" onerror="this.style.display=\'none\'" />' +
+              '<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>' +
+              '<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-mono text-zinc-200">' +
+                '<span class="font-bold text-white">' + curr.symbol + ' Value</span>' +
+                '<span class="text-cyan-300">' + item.stockText + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<div class="flex flex-1 flex-col justify-between p-5">' +
+              '<div>' +
+                '<p class="text-[11px] font-semibold uppercase tracking-wider text-theme-muted">' + meta + '</p>' +
+                '<h3 class="mt-1.5 font-display text-lg font-bold leading-snug text-theme-primary">' + title + '</h3>' +
+                '<div class="mt-3 flex items-baseline gap-2.5">' +
+                  '<span class="font-mono text-xs text-theme-muted line-through tabular-nums">' + curr.retail + '</span>' +
+                  '<span class="font-mono text-sm font-bold text-emerald-400 tabular-nums">$0.00 Sponsor Pass</span>' +
+                '</div>' +
+              '</div>' +
+              '<div class="mt-5 flex items-center gap-2">' +
+                '<button type="button" data-select-item="' + item.id + '" class="select-item-btn min-h-[44px] flex-1 rounded-xl border border-theme px-3 py-2 text-xs font-bold transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 ' +
+                  (isSelected ? 'text-white border-transparent' : 'shop-elevated text-theme-primary hover:border-pink-500/60') + '" ' +
+                  (isSelected ? 'style="background: linear-gradient(95deg, var(--accent-2), var(--accent-1));"' : '') + '>' +
+                  (isSelected ? 'In Reward Bag ✓' : 'Select & Verify') +
+                '</button>' +
+                '<a href="' + CTA_URL + '" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-[44px] items-center justify-center rounded-xl px-3.5 py-2 text-xs font-bold text-white whitespace-nowrap transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400" style="background: linear-gradient(95deg, var(--accent-1), var(--accent-3));">Claim →</a>' +
+              '</div>' +
+            '</div>';
+
+          catalogGridEl.appendChild(card);
+        });
+
+        // Wire card "Select & Verify" buttons
+        document.querySelectorAll('.select-item-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const id = btn.getAttribute('data-select-item');
+            const item = storeItems.find(function (i) { return i.id === id; });
+            if (!item) return;
+
+            selectedItemId = item.id;
+            syncCatalogControls();
+            renderCatalogGrid();
+
+            // Pre-select platform in the Eligibility Quiz and scroll smoothly
+            chosenPlatform = item.platformValue;
+            if (selectedPlatformLabel) selectedPlatformLabel.textContent = chosenPlatform;
+            showQuizPanel('step2');
+
+            const quizSection = document.getElementById('eligibility-quiz');
+            if (quizSection) {
+              quizSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      }
+
+      catalogTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          activeFilter = tab.getAttribute('data-filter') || 'all';
+          syncCatalogControls();
+          renderCatalogGrid();
+        });
+      });
+
+      regionBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          activeRegion = btn.getAttribute('data-region') || 'US';
+          syncCatalogControls();
+          renderCatalogGrid();
+        });
+      });
+
+      if (bundleToggleBtn) {
+        bundleToggleBtn.addEventListener('click', function () {
+          isBundleMode = !isBundleMode;
+          bundleToggleBtn.setAttribute('aria-checked', String(isBundleMode));
+          if (bundleKnob) {
+            bundleKnob.style.transform = isBundleMode ? 'translateX(16px)' : 'translateX(0px)';
+          }
+          if (bundleTrack) {
+            bundleTrack.style.background = isBundleMode
+              ? 'linear-gradient(95deg, var(--accent-1), var(--accent-2))'
+              : '#3f3f46';
+          }
+          if (labelModeCards) labelModeCards.className = isBundleMode ? 'text-theme-muted' : 'text-theme-primary';
+          if (labelModeBundles) labelModeBundles.className = isBundleMode ? 'text-theme-primary' : 'text-theme-muted';
+
+          syncCatalogControls();
+          renderCatalogGrid();
+        });
+      }
+
+      // =========================================================================
+      // 3. Live Countdown Timer in Urgency Bar
+      // =========================================================================
+      const timerEl = document.getElementById('countdown-timer');
+      const stockEl = document.getElementById('stock-count');
+      let remainingSeconds = 9 * 60 + 47;
+
+      function formatTime(totalSecs) {
+        const mins = Math.floor(totalSecs / 60);
+        const secs = totalSecs % 60;
+        return String(mins).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
+      }
+
+      if (timerEl) {
+        timerEl.textContent = formatTime(remainingSeconds);
+        setInterval(function () {
+          remainingSeconds = remainingSeconds > 1 ? remainingSeconds - 1 : 9 * 60 + 59;
+          timerEl.textContent = formatTime(remainingSeconds);
+        }, 1000);
+      }
+
+      setTimeout(function () {
+        if (stockEl && stockEl.textContent === '14') {
+          stockEl.textContent = '13';
+        }
+      }, 22000);
+
+      // =========================================================================
+      // 4. Interactive 2-Step Eligibility Quiz
+      // =========================================================================
+      const step1El = document.getElementById('quiz-step-1');
+      const step2El = document.getElementById('quiz-step-2');
+      const loadingEl = document.getElementById('quiz-loading');
+      const resultEl = document.getElementById('quiz-result');
+      const indicatorEl = document.getElementById('quiz-step-indicator');
+      const progressBarEl = document.getElementById('quiz-progress-bar');
+      const selectedPlatformLabel = document.getElementById('selected-platform-label');
+      const loadingSubtextEl = document.getElementById('loading-subtext');
+      const reservedSummaryEl = document.getElementById('reserved-summary');
+      const backBtn = document.getElementById('back-to-step-1');
+      const resetBtn = document.getElementById('reset-quiz-btn');
+
+      let chosenPlatform = '';
+      let chosenCountry = '';
+      let verifyTimeout = null;
+
+      function showQuizPanel(panelName) {
+        step1El.classList.add('hidden');
+        step2El.classList.add('hidden');
+        loadingEl.classList.add('hidden');
+        resultEl.classList.add('hidden');
+
+        if (panelName === 'step1') {
+          step1El.classList.remove('hidden');
+          indicatorEl.textContent = 'Step 1 of 2';
+          progressBarEl.style.width = '50%';
+        } else if (panelName === 'step2') {
+          step2El.classList.remove('hidden');
+          indicatorEl.textContent = 'Step 2 of 2';
+          progressBarEl.style.width = '85%';
+        } else if (panelName === 'loading') {
+          loadingEl.classList.remove('hidden');
+          indicatorEl.textContent = 'Checking Stock';
+          progressBarEl.style.width = '95%';
+        } else if (panelName === 'result') {
+          resultEl.classList.remove('hidden');
+          indicatorEl.textContent = 'Verified';
+          progressBarEl.style.width = '100%';
+        }
+      }
+
+      document.querySelectorAll('.platform-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          chosenPlatform = btn.getAttribute('data-platform') || 'PS5';
+          selectedPlatformLabel.textContent = chosenPlatform;
+          showQuizPanel('step2');
+        });
+      });
+
+      if (backBtn) {
+        backBtn.addEventListener('click', function () {
+          showQuizPanel('step1');
+        });
+      }
+
+      document.querySelectorAll('.country-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          chosenCountry = btn.getAttribute('data-country') || 'United States';
+          const countryCode = btn.getAttribute('data-code') || 'US';
+
+          // Sync region currency preview with chosen country
+          if (currencyMap[countryCode]) {
+            activeRegion = countryCode;
+            syncCatalogControls();
+            renderCatalogGrid();
+          }
+
+          loadingSubtextEl.textContent = 'Allocating ' + chosenPlatform + ' reward stock for ' + chosenCountry + ' (' + countryCode + ')';
+          showQuizPanel('loading');
+
+          if (verifyTimeout) clearTimeout(verifyTimeout);
+          verifyTimeout = setTimeout(function () {
+            const rewardType =
+              chosenPlatform === 'PS5'
+                ? '$100 PlayStation Store Code'
+                : chosenPlatform === 'Xbox Series X/S'
+                ? '$100 Xbox Digital Gift Card'
+                : '$100 Steam Wallet Code';
+
+            reservedSummaryEl.textContent =
+              'Your ' + rewardType + ' is reserved for ' + chosenCountry + ' (' + chosenPlatform + ').';
+            showQuizPanel('result');
+          }, 1500);
+        });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          chosenPlatform = '';
+          chosenCountry = '';
+          showQuizPanel('step1');
+        });
+      }
+
+      // Initialize storefront catalog
+      syncCatalogControls();
+      renderCatalogGrid();
+
+      // =========================================================================
+      // 5. Recent Verified Claims Feed
+      // =========================================================================
+      const claimsListEl = document.getElementById('claims-feed-list');
+      const initialClaims = [
+        { name: 'Marcus T.', city: 'Austin, US', reward: '$100 PSN Code', time: '4 mins ago' },
+        { name: 'Hannah R.', city: 'Manchester, UK', reward: '$100 Xbox Code', time: '9 mins ago' },
+        { name: 'Liam K.', city: 'Toronto, CA', reward: '$100 Steam Code', time: '14 mins ago' },
+        { name: 'Chloe W.', city: 'Sydney, AU', reward: '$100 PSN Code', time: '21 mins ago' },
+        { name: 'Devon B.', city: 'Phoenix, US', reward: '$100 Xbox Code', time: '28 mins ago' }
+      ];
+
+      const incomingPool = [
+        { name: 'Ethan M.', city: 'Chicago, US', reward: '$100 Steam Code', time: 'Just now' },
+        { name: 'Sophie L.', city: 'London, UK', reward: '$100 PSN Code', time: 'Just now' },
+        { name: 'Noah P.', city: 'Vancouver, CA', reward: '$100 Xbox Code', time: 'Just now' },
+        { name: 'Jack D.', city: 'Melbourne, AU', reward: '$100 Steam Code', time: 'Just now' }
+      ];
+
+      let incomingIndex = 0;
+
+      function renderClaims(items, animateFirst) {
+        if (!claimsListEl) return;
+        claimsListEl.innerHTML = '';
+
+        items.forEach(function (item, idx) {
+          const row = document.createElement('div');
+          row.className = 'flex items-center justify-between gap-4 px-5 py-3.5 text-sm' + (animateFirst && idx === 0 ? ' claim-enter' : '');
+
+          const left = document.createElement('div');
+          left.className = 'min-w-0';
+
+          const topLine = document.createElement('p');
+          topLine.className = 'truncate font-medium text-theme-primary';
+          topLine.textContent = item.name + ' (' + item.city + ')';
+
+          const subLine = document.createElement('p');
+          subLine.className = 'mt-0.5 text-xs text-theme-secondary';
+          subLine.textContent = 'Claimed ' + item.reward;
+
+          left.appendChild(topLine);
+          left.appendChild(subLine);
+
+          const right = document.createElement('span');
+          right.className = 'shrink-0 font-mono text-xs tabular-nums';
+          right.style.color = 'var(--accent-2)';
+          right.textContent = item.time;
+
+          row.appendChild(left);
+          row.appendChild(right);
+          claimsListEl.appendChild(row);
+        });
+      }
+
+      const activeClaims = initialClaims.slice();
+      renderClaims(activeClaims, false);
+
+      setInterval(function () {
+        const nextClaim = Object.assign({}, incomingPool[incomingIndex % incomingPool.length]);
+        incomingIndex += 1;
+        activeClaims.unshift(nextClaim);
+        activeClaims.pop();
+        renderClaims(activeClaims, true);
+      }, 14000);
+
+      // =========================================================================
+      // 6. Accessible FAQ Accordion
+      // =========================================================================
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      faqTriggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+          const panelId = trigger.getAttribute('aria-controls');
+          const panel = panelId ? document.getElementById(panelId) : null;
+          const icon = trigger.querySelector('.faq-icon');
+
+          faqTriggers.forEach(function (other) {
+            if (other !== trigger) {
+              other.setAttribute('aria-expanded', 'false');
+              const otherId = other.getAttribute('aria-controls');
+              const otherPanel = otherId ? document.getElementById(otherId) : null;
+              const otherIcon = other.querySelector('.faq-icon');
+              if (otherPanel) otherPanel.classList.add('hidden');
+              if (otherIcon) otherIcon.classList.remove('rotate-180');
+            }
+          });
+
+          trigger.setAttribute('aria-expanded', String(!isExpanded));
+          if (panel) panel.classList.toggle('hidden', isExpanded);
+          if (icon) icon.classList.toggle('rotate-180', !isExpanded);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
