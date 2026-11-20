@@ -1,0 +1,6 @@
+{
+  "name": "Leonida Gaming Rewards",
+  "description": "Claim a $100 digital gaming gift card toward Grand Theft Auto VI for PlayStation, Xbox, or Steam. Eligible for US, UK, Canada, and Australia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
